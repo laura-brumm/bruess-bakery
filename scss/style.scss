@@ -1,0 +1,322 @@
+/* ----- COLORS ----- */
+
+$bg__off-white: #fafafa;
+
+/*pink*/
+$text__primary: #e28582;
+
+/*gray*/
+$text__secondary: #606c6f;
+	
+.bg__off-white {
+	background: $bg__off-white;
+}
+
+.text__primary {
+	color: #e28582;
+}
+
+.text__secondary {
+	color: #606c6f;
+}
+
+
+/* ----- FONTS ----- */
+
+
+/* ----- UNIVERSAL STYLING ----- */
+*,
+body {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.floater {
+	background: white;
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	
+	@media (max-width: 576px) {
+		transform: none;
+		position: static;
+	}
+}
+
+h1 {
+	color: $text__primary;
+	font: {
+		family: serif;
+		size: 2rem;
+		weight: bold;
+	}
+	letter-spacing: 0.75rem;
+	padding: 10px 0;
+	
+	@media (max-width: 576px) {
+		font-size: 1.5rem;
+	}
+}
+
+h2 {
+	color: $text__primary;
+	font: {
+		family: serif;
+		size: 1.5rem;
+	}
+	letter-spacing: 0.3rem;
+	padding: 10px 0;
+}
+
+h3 {
+	color: $text__primary;
+	font: {
+		family: serif;
+		size: 0.95rem;
+	}
+	letter-spacing: 0.3rem;
+	padding: 15px;
+}
+
+h4 {
+	color: $text__primary;
+	font: {
+		family: serif;
+		size: 0.75rem;
+	}
+	letter-spacing: 0.1rem;
+	padding: 5px 0;
+}
+
+.section__bg-solid {
+	background: $bg__off-white;
+	padding: 60px 0;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+
+/* ----- BANNER SECTION ----- */
+
+.section__banner {
+	background-image: url("http://image.ibb.co/bvJSJS/banner.jpg");
+	background: {
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	height: 85vh;
+	
+	@media (max-width: 576px) {
+		height: 60vh;
+	}
+	
+	.content__banner {
+		margin: 0 auto;
+		max-width: 600px;
+		padding: 10px;
+		text-align: center;
+		
+		@media (max-width: 576px) {
+			background: white;
+		}
+	}
+}
+
+.banner__nav {
+	text-align: center;
+	
+	.nav {
+		display: inline-block;
+		overflow: hidden;
+		
+		li {
+			float: left;
+			
+			a {
+				color: $text__primary;
+				display: block;
+				font-size: 12px;
+				padding: 10px;
+				text-decoration: none;
+				
+				&:hover {
+					color: white;
+					background: $text__primary;
+					transition: 0.3s ease-in-out;
+				}
+			}
+		}
+	}
+	
+	.nav-top,
+	.nav-bottom {
+		@media (max-width: 576px) {
+			float: none;
+		}
+	}
+}
+
+
+/* ----- ABOUT SECTION ----- */
+
+.section__about {
+	width: 100%;
+	
+	.content__about {
+		margin: 0 auto;
+		text-align: center;
+		max-width: 400px;	
+		
+		.divider__about {
+			background: $text__secondary;
+			height: 1px;
+			margin: 0 auto;
+			opacity: 0.75;
+			width: 50px;
+		}
+		
+		p {
+			color: $text__secondary;
+			font-weight: 300;
+			line-height: 20px;
+			padding: 10px 0;
+			
+			@media (max-width: 576px) {
+				padding: 10px 10%;
+			}
+		}
+	}
+}
+
+
+/* ----- FEATURE SECTION ----- */
+
+.section__feature {
+	background-image: url("http://image.ibb.co/koUCk7/feature.jpg");
+	background: {
+		position: center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	
+	.content__feature {
+		max-width: 300px;
+		padding: 15% 5%;
+		
+		.divider__feature {
+			background: $text__primary;
+			height: 1px;
+			width: 100%;
+		}
+	
+		p {
+			color: $text__primary;
+			font: {
+				family: cursive;
+				size: 24px;
+			}
+		}
+	}
+}
+
+
+/* ----- SERVICES SECTION ----- */
+
+.section__service {
+	margin: 0 auto;
+	text-align: center;
+	
+	.heading-content__service {
+		
+		.divider__service {
+			background: $text__primary;
+			height: 1px;
+			margin: 0 auto;
+			width: 50px;
+		}
+		
+		p {
+			color: $text__secondary;
+			padding: 10px 0;
+			font-weight: 300;
+		}
+	}
+	
+	.main-content__service {
+		overflow: hidden;
+	}
+	
+	.block__service {
+		float: left;
+		max-width: 33.33%;
+	
+		img {
+			max-width: 100%;
+		}
+		
+		p {
+			color: $text__primary;
+			font-family: cursive;
+		}
+		
+		@media (max-width: 768px) {
+			
+			margin: 0 auto;
+			padding-bottom: 10px;
+		}
+		
+		@media (max-width: 576px) {
+			float: none;
+			max-width: 300px;
+		}
+	}
+}
+
+
+/* ----- FOOTER SECTION ----- */
+
+.footer {
+	.content__footer {
+		overflow: hidden;
+		padding: 20px 0;
+		width: 100%;
+		
+		.location__footer,
+		.copy__footer {
+			float: left;
+			width: 50%;
+			text-align: center;
+			
+			@media (max-width: 772px) {
+				width: 100%;
+			}
+		}
+	
+		p {
+			color: $text__primary;
+			display: inline-block;
+			font: {
+				size: 12px;
+				weight: 300;
+			}
+			letter-spacing: 1px;
+			padding: 10px;
+			
+			@media (max-width: 772px) {
+				padding: 5px;
+			}
+		}
+	}
+}
